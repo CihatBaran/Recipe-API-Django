@@ -20,5 +20,12 @@ class AdminUser(UserAdmin):
 
     )
 
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('email', 'password1', 'password2'),
+        }),
+    )
+
     class Meta:
         model = CustomUser
